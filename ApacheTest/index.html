@@ -6,24 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+
+    
 </head>
 <body>
-    <header>
-    
-    <div class="main">
+    <header class="TOP">
+        <div class="main">
         <div class="logo">
             <img src="img/freestyle-skiing.png">
 
         </div>
         <ul>
             <li class="active"><a href="#">Home</a><li>
-            <li><a href="#">Snow</a><li>
+            <li><a href="ClickTrial/indexPage2.html">Snow</a><li>
             <li><a href="#">Clips</a><li>
             <li><a href="#">Resorts</a><li>
         </ul>
     </div>
+    </header>
+    <header class = "main">
+
+    </div>
     <div class="title">
-        <h1>
+        <h1 class = "test">
             Powder Chasers
         </h1>
     </div>
@@ -35,5 +40,54 @@
 
     </div>
 </header>
+<main>
+    <div>
+        <p id="demo">A Paragraph.</p>
+
+<button type="button" onclick="myFunction()">Try it</button>
+
+<script>
+function myFunction() {
+  document.getElementById("demo").innerHTML = "Paragraph changed.";
+}
+</script>
+    </div>
+    <div>
+        <form action="/action_page.php">
+            <label for="fname">First name:</label><br>
+            <input type="text" id="fname" value="John"><br><br>
+            <label for="fname">Last Name:</label><br>
+            <input type="text" id="fname" value="John"><br><br>
+            <input type="submit" value="Submit">
+          </form> 
+    </div>
+</main>
+
+
+<p>Click the button to get your coordinates.</p>
+
+<button onclick="getLocation()">Try It</button>
+
+<p><strong>Note:</strong> The geolocation property is not supported in IE8 and earlier versions.</p>
+
+<p id="demos"></p>
+
+<script>
+var x = document.getElementById("demos");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+}
+</script>
+
 </body>
 </html>

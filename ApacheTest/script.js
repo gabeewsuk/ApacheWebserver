@@ -2,6 +2,12 @@ let number = document.getElementById("num").value;
 
 let output = document.getElementById("output");
 
+function myFunction() {
+  console.log("This is a working button");
+
+}
+
+
 function increment(event) {
   event.preventDefault();
   number.value++;
